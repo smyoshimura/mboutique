@@ -1,5 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 li {
     list-style: none;
+}
+
+a, li a:visited  {
+    color: #515151;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#navbar_wrapper, {
+    position: relative;
 }
 
 .navbar {
@@ -11,9 +27,22 @@ li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #515151;
+    position: relative;
 }
 
-.navbar ul li:hover {
+.navbar ul {
+    width: 70%;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    float: none;
+    position: absolute;
+    list-style: none;
+}
+
+li a:hover, li a:active {
+    text-decoration: none;
     color: #d42551;
 }
 
@@ -56,10 +85,7 @@ header ul li {
 }
 
 .main_content {
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 6%;
+    margin: 5% auto;
     width: 900px;
     align-content: center;
     position: relative;
@@ -67,7 +93,7 @@ header ul li {
 
 #main_text {
     overflow: auto;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 p {
@@ -319,6 +345,7 @@ ul li img {
 .footerblock ul {
     align-content: center;
     width: 99%;
+    padding: 0;
 }
 
 .footerblock ul li {
@@ -363,7 +390,7 @@ ul li img {
     width: 1000px;
     align-content: center;
     margin: auto;
-    padding-top: 3%;
+    padding: 2% 0 8% 0;
 }
 
 #main_ourmacarons_text {
@@ -390,7 +417,7 @@ ul li img {
     width: 900px;
     align-content: center;
     margin: auto;
-    padding-top: 2.5%;
+    padding-top: 4%;
 }
 
 /* gifts_parties.html specific css starts here! */
@@ -418,7 +445,8 @@ main {
 }
 
 .maincontent_contact {
-    width: 90%;
+    height: 45vh;
+    width: 91%;
     padding-top: 4%;
     margin: auto;
     text-align: center;
@@ -495,9 +523,13 @@ main {
 
 @media screen and (max-width: 627px) {
     body {
-        100vw;
+        width: 100vw;
         margin: 0;
         padding: 0;
+    }
+
+    main {
+        width: 100vw;
     }
 
     #navbar_wrapper {
@@ -546,14 +578,45 @@ main {
     #welcomebanner {
         width: 100vw;
         height: auto;
+        margin: 0;
+    }
+
+    .main_content {
+        width: 100%;
+    }
+
+    .sampleschedule {
+        width: 100%;
+    }
+
+    .sampleschedule > div {
+        display: block;
+        margin: 5%;
     }
 
     #left_col {
-        width: 90vw;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        padding: 0 0 8% 2%;
     }
 
-    #right_col {
+    #middle_col {
+        display: block;
+        padding: 5% 0;
+    }
+
+    form p.headers {
+        padding-top: 4%;
+    }
+
+    #right_col, #main_mac_image, #our_mac_bgimg {
         display: none;
+    }
+
+    .maincontent_ourmacarons, #main_ourmacarons_text, #postimage_text {
+        width: 100%;
+        padding: 0;
     }
 
     .footerblock {
